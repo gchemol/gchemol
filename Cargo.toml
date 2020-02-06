@@ -10,7 +10,7 @@ authors = ["Wenping Guo <ybyygu@gmail.com>"]
 [dependencies]
 gchemol-core = {path = "../gchemol-core"}
 gchemol-readwrite = {path = "../gchemol-readwrite"}
-#gchemol-geometry = {version = "*", path = "../gchemol-geometry"}
+gchemol-geometry = {path = "../gchemol-geometry"}
 
 [dev-dependencies]
 tempfile = "3"
