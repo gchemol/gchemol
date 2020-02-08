@@ -1,18 +1,21 @@
-# cargo
-
-# [[file:~/Workspace/Programming/gchemol-rs/gchemol-new/gchemol-new.note::*cargo][cargo:1]]
 [package]
 name = "gchemol"
-version = "0.1.0-alpha1"
+version = "0.0.37"
 edition = "2018"
 authors = ["Wenping Guo <ybyygu@gmail.com>"]
+description = "gchemol: a Graph-based CHEMical Objects Library"
+homepage = "https://github.com/gchemol/gchemol"
+repository = "https://github.com/gchemol/gchemol"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
-gchemol-core = {path = "../gchemol-core"}
-gchemol-readwrite = {path = "../gchemol-readwrite"}
-gchemol-geometry = {path = "../gchemol-geometry"}
+gchemol-core = "0.0.37"
+gchemol-readwrite = "0.0.36"
+gchemol-geometry = "0.0.36"
+# gchemol-core = {path = "../gchemol-core"}
+# gchemol-readwrite = {path = "../gchemol-readwrite"}
+# gchemol-geometry = {path = "../gchemol-geometry"}
 
 [dev-dependencies]
 tempfile = "3"
 approx = "0.3"
-# cargo:1 ends here

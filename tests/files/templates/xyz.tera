@@ -1,0 +1,11 @@
+{{molecule.number_of_atoms}}
+{{molecule.title | trim}}
+{% for a in molecule.atoms -%}
+{{ a.symbol | format(width=3) }} {{a.x | format }} {{a.y | format }} {{a.z | format(align="left", prec=12, width=20) }}
+{% endfor -%}
+{# output unit cell translation vectors using dummy atom TV #}
+{%- if molecule.unit_cell -%}
+TV {% for v in molecule.unit_cell.va %} {{v | format}} {% endfor %}
+TV {% for v in molecule.unit_cell.vb %} {{v | format}} {% endfor %}
+TV {% for v in molecule.unit_cell.vc %} {{v | format}} {% endfor %}
+{% endif %}
