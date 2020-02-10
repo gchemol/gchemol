@@ -10,7 +10,7 @@
 //        AUTHOR:  Wenping Guo <ybyygu@gmail.com>
 //       LICENCE:  GPL version 2 or upper
 //       CREATED:  <2018-04-10 Tue 15:46>
-//       UPDATED:  <2020-02-08 Sat 10:54>
+//       UPDATED:  <2020-02-08 Sat 11:27>
 //===============================================================================#
 // header:1 ends here
 
@@ -20,6 +20,7 @@
 pub use gchemol_core::*;
 
 pub mod io {
+    pub use gchemol_gut::fs::{read_file, write_to_file};
     pub use gchemol_readwrite::*;
 }
 

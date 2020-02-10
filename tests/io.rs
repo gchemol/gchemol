@@ -2,8 +2,7 @@
 
 #[test]
 fn io_from_file_to_file() {
-    // use gchemol::prelude::*;
-    use gchemol_readwrite::prelude::*;
+    use gchemol::prelude::*;
     use gchemol::Molecule;
 
     // 1. string io
