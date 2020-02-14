@@ -1,6 +1,6 @@
 [package]
 name = "gchemol"
-version = "0.0.38"
+version = "0.0.39"
 edition = "2018"
 authors = ["Wenping Guo <ybyygu@gmail.com>"]
 description = "gchemol: a Graph-based CHEMical Objects Library"
@@ -9,11 +9,14 @@ repository = "https://github.com/gchemol/gchemol"
 license = "MIT OR Apache-2.0"
 
 [dependencies]
-gchemol-gut = "0.0.8"
-gchemol-core = "0.0.38"
-gchemol-readwrite = "0.0.37"
-gchemol-geometry = "0.0.37"
+gchemol-core = "0.0.39"
+gchemol-readwrite = "0.1.0"
+gchemol-geometry = "0.0.38"
+gchemol-gut = "0.1"
 
 [dev-dependencies]
 tempfile = "3"
 approx = "0.3"
+
+[features]
+adhoc = ["gchemol-core/adhoc", "gchemol-geometry/adhoc", "gchemol-readwrite/adhoc"] # for adhoc hacking
