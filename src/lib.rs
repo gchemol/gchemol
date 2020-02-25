@@ -10,7 +10,7 @@
 //        AUTHOR:  Wenping Guo <ybyygu@gmail.com>
 //       LICENCE:  GPL version 2 or upper
 //       CREATED:  <2018-04-10 Tue 15:46>
-//       UPDATED:  <2020-02-21 Fri 13:07>
+//       UPDATED:  <2020-02-25 Tue 12:29>
 //===============================================================================#
 // header:1 ends here
 
@@ -36,16 +36,32 @@ pub mod prelude {
 // compat
 
 // [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*compat][compat:1]]
+#[cfg(feature = "adhoc")]
 /// For maintaining compatibility
 pub mod compat {
     use crate::{Atom, Molecule};
 
-    pub trait GchemolCompat {
+    pub trait GchemolCompat
+    where
+        Self: Sized,
+    {
         fn positions_vec(&self) -> Vec<[f64; 3]> {
             todo!()
         }
 
         fn atoms_vec(&self) -> Vec<&Atom> {
+            todo!()
+        }
+
+        fn symbols_vec(&self) -> Vec<&str> {
+            todo!()
+        }
+
+        fn sorted(&self) -> Self {
+            todo!()
+        }
+
+        fn fragment(&self) -> Vec<Self> {
             todo!()
         }
     }
@@ -60,8 +76,29 @@ pub mod compat {
         fn atoms_vec(&self) -> Vec<&Atom> {
             self.atoms().map(|(_, a)| a).collect()
         }
+
+        /// replace old .symbols() method
+        fn symbols_vec(&self) -> Vec<&str> {
+            self.symbols().collect()
+        }
+
+        /// replace old .sorted() method
+        fn sorted(&self) -> Self {
+            let numbers: Vec<_> = self.atomic_numbers().map(|n| std::cmp::Reverse(n)).collect();
+
+            let mut mol = self.clone();
+            mol.reorder(&numbers);
+            mol
+        }
+
+        // FIXME: method name, fragment or something else?
+        /// Break molecule into multiple fragments based on its bonding connectivity.
+        fn fragment(&self) -> Vec<Self> {
+            self.graph()
+                .connected_components()
+                .map(|g| Molecule::from_graph(g))
+                .collect()
+        }
     }
 }
-
-use crate::compat::*;
 // compat:1 ends here
