@@ -33,7 +33,7 @@ follow the official guide:
 add gchemol dependency to your Cargo.toml:
 
     [dependencies]
-    gchemol = "0.0.39"
+    gchemol = "0.0.40"
 
 
 # Related projects
