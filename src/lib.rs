@@ -1,6 +1,5 @@
-// header
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*header][header:1]]
+// [[file:../gchemol.note::*header][header:1]]
+#![deny(warnings)]
 //===============================================================================#
 //   DESCRIPTION:  gchemol: a Graph-based CHEMical Objects Library
 //
@@ -10,13 +9,11 @@
 //        AUTHOR:  Wenping Guo <ybyygu@gmail.com>
 //       LICENCE:  GPL version 2 or upper
 //       CREATED:  <2018-04-10 Tue 15:46>
-//       UPDATED:  <2020-02-25 Tue 12:29>
+//       UPDATED:  <2021-06-21 Mon 15:37>
 //===============================================================================#
 // header:1 ends here
 
-// exports
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*exports][exports:1]]
+// [[file:../gchemol.note::*exports][exports:1]]
 pub use gchemol_core::*;
 
 pub mod io {
@@ -31,11 +28,20 @@ pub mod geom {
 pub mod prelude {
     pub use gchemol_readwrite::prelude::*;
 }
+
+/// Conversion factors from different units
+#[allow(non_upper_case_globals)]
+pub mod units {
+    pub const eV: f64 = 1.0;
+    pub const Angstrom: f64 = 1.0;
+    pub const Hartree: f64 = 27.2116;
+    pub const Bohr: f64 = 0.529177249;
+    /// Boltzmann constant
+    pub const kB: f64 = 8.617333262145E-5;
+}
 // exports:1 ends here
 
-// compat
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*compat][compat:1]]
+// [[file:../gchemol.note::*compat][compat:1]]
 #[cfg(feature = "adhoc")]
 /// For maintaining compatibility
 pub mod compat {
