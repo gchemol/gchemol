@@ -1,7 +1,5 @@
-// build lattice
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*build lattice][build lattice:1]]
-use approx::*;
+// [[file:../gchemol.note::*build lattice][build lattice:1]]
+use vecfx::approx::assert_relative_eq;
 
 #[test]
 fn test_crystal() {
@@ -36,9 +34,7 @@ fn test_crystal() {
 }
 // build lattice:1 ends here
 
-// supercell
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*supercell][supercell:1]]
+// [[file:../gchemol.note::*supercell][supercell:1]]
 #[test]
 fn test_supercell() {
     use gchemol::prelude::*;

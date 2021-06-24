@@ -1,10 +1,10 @@
 // [[file:../gchemol.note::*alignment][alignment:1]]
 #[test]
 fn test_alignment() {
-    use approx::*;
+    use approx::assert_relative_eq;
+    use gchemol::geom::Superpose;
     use gchemol::prelude::*;
     use gchemol::Molecule;
-    use gchemol::geom::Superpose;
     use vecfx::*;
 
     // load test molecules

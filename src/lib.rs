@@ -9,7 +9,7 @@
 //        AUTHOR:  Wenping Guo <ybyygu@gmail.com>
 //       LICENCE:  GPL version 2 or upper
 //       CREATED:  <2018-04-10 Tue 15:46>
-//       UPDATED:  <2021-06-21 Mon 15:37>
+//       UPDATED:  <2021-06-24 Thu 17:17>
 //===============================================================================#
 // header:1 ends here
 
@@ -100,10 +100,7 @@ pub mod compat {
         // FIXME: method name, fragment or something else?
         /// Break molecule into multiple fragments based on its bonding connectivity.
         fn fragment(&self) -> Vec<Self> {
-            self.graph()
-                .connected_components()
-                .map(|g| Molecule::from_graph(g))
-                .collect()
+            self.graph().connected_components().map(|g| Molecule::from_graph(g)).collect()
         }
     }
 }
