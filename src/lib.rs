@@ -9,11 +9,11 @@
 //        AUTHOR:  Wenping Guo <ybyygu@gmail.com>
 //       LICENCE:  GPL version 2 or upper
 //       CREATED:  <2018-04-10 Tue 15:46>
-//       UPDATED:  <2021-06-24 Thu 17:17>
+//       UPDATED:  <2022-01-02 Sun 16:07>
 //===============================================================================#
 // header:1 ends here
 
-// [[file:../gchemol.note::*exports][exports:1]]
+// [[file:../gchemol.note::66712791][66712791]]
 pub use gchemol_core::*;
 
 pub mod io {
@@ -34,12 +34,12 @@ pub mod prelude {
 pub mod units {
     pub const eV: f64 = 1.0;
     pub const Angstrom: f64 = 1.0;
-    pub const Hartree: f64 = 27.2116;
-    pub const Bohr: f64 = 0.529177249;
+    pub const Hartree: f64 = 27.211386024367243;
+    pub const Bohr: f64 = 0.5291772105638411;
     /// Boltzmann constant
-    pub const kB: f64 = 8.617333262145E-5;
+    pub const kB: f64 = 8.617330337217213E-05;
 }
-// exports:1 ends here
+// 66712791 ends here
 
 // [[file:../gchemol.note::*compat][compat:1]]
 #[cfg(feature = "adhoc")]

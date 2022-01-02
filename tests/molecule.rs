@@ -18,8 +18,8 @@ fn test_new_atom() {
     assert_eq!(a.position(), [1.0, 1.0, 0.2]);
 
     // set more attributes
-    a.set_momentum([0.0, 5.0, 6.0]);
-    assert_eq!([0.0, 5.0, 6.0], a.momentum());
+    a.set_velocity([0.0, 5.0, 6.0]);
+    assert_eq!([0.0, 5.0, 6.0], a.velocity());
 }
 
 // build molecule from atoms
