@@ -1,7 +1,7 @@
 [package]
 name = "gchemol"
 version = "0.0.42"
-edition = "2018"
+edition = "2021"
 authors = ["Wenping Guo <ybyygu@gmail.com>"]
 description = "gchemol: a Graph-based CHEMical Objects Library"
 homepage = "https://github.com/gchemol/gchemol"
@@ -14,7 +14,7 @@ readme = "README.md"
 gchemol-core = "0.0.43"
 gchemol-readwrite = "0.0.43"
 gchemol-geometry = "0.0.41"
-gchemol-gut = "0.1.3"
+gchemol-gut = "0.2"
 
 [dev-dependencies]
 tempfile = "3"
