@@ -13,7 +13,7 @@ readme = "README.md"
 [dependencies]
 gchemol-core = "0.0.43"
 gchemol-readwrite = "0.0.43"
-gchemol-geometry = "0.0.41"
+gchemol-geometry = "0.1.0"
 gchemol-gut = "0.2"
 
 [dev-dependencies]
