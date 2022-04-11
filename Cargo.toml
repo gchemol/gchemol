@@ -11,8 +11,8 @@ exclude = ["bin/*", "docs/*", "ltxpng/*", "data/*"]
 readme = "README.md"
 
 [dependencies]
-gchemol-core = "0.0.43"
-gchemol-readwrite = "0.0.43"
+gchemol-core = "0.1.0"
+gchemol-readwrite = "0.1.0"
 gchemol-geometry = "0.1.0"
 gchemol-gut = "0.2"
 
