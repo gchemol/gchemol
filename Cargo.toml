@@ -1,6 +1,6 @@
 [package]
 name = "gchemol"
-version = "0.0.42"
+version = "0.1.0"
 edition = "2021"
 authors = ["Wenping Guo <ybyygu@gmail.com>"]
 description = "gchemol: a Graph-based CHEMical Objects Library"
