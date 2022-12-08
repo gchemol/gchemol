@@ -14,7 +14,7 @@ readme = "README.md"
 gchemol-core = "0.1.0"
 gchemol-readwrite = "0.1.0"
 gchemol-geometry = "0.1.0"
-gchemol-gut = "0.2"
+gchemol-gut = "0.4"
 
 [dev-dependencies]
 tempfile = "3"
