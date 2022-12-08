@@ -1,7 +1,5 @@
-// build lattice
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*build lattice][build lattice:1]]
-use approx::*;
+// [[file:../gchemol.note::*build lattice][build lattice:1]]
+use vecfx::approx::assert_relative_eq;
 
 #[test]
 fn test_crystal() {
@@ -36,9 +34,7 @@ fn test_crystal() {
 }
 // build lattice:1 ends here
 
-// supercell
-
-// [[file:~/Workspace/Programming/gchemol-rs/gchemol/gchemol.note::*supercell][supercell:1]]
+// [[file:../gchemol.note::*supercell][supercell:1]]
 #[test]
 fn test_supercell() {
     use gchemol::prelude::*;
@@ -57,3 +53,19 @@ fn test_supercell() {
     assert_relative_eq!(c, 13.8670, epsilon = 1e-4);
 }
 // supercell:1 ends here
+
+// [[file:../gchemol.note::31a42004][31a42004]]
+#[test]
+fn test_bounding_box() {
+    use gchemol::prelude::*;
+    use gchemol::Molecule;
+
+    let mut mol = Molecule::from_database("CH4");
+    mol.set_lattice_from_bounding_box(1.0);
+    assert!(mol.is_periodic());
+    let [a, b, c] = mol.get_lattice().unwrap().lengths();
+    assert!(a >= 3.4);
+    assert!(b >= 3.5);
+    assert!(c >= 3.7);
+}
+// 31a42004 ends here
