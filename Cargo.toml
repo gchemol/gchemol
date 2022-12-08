@@ -1,19 +1,19 @@
 [package]
 name = "gchemol"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Wenping Guo <ybyygu@gmail.com>"]
 description = "gchemol: a Graph-based CHEMical Objects Library"
 homepage = "https://github.com/gchemol/gchemol"
 repository = "https://github.com/gchemol/gchemol"
-license = "MIT OR Apache-2.0"
+license = "GPL-3.0"
 exclude = ["bin/*", "docs/*", "ltxpng/*", "data/*"]
 readme = "README.md"
 
 [dependencies]
 gchemol-core = "0.1.0"
 gchemol-readwrite = "0.1.0"
-gchemol-geometry = "0.1.0"
+gchemol-geometry = "0.1.1"
 gchemol-gut = "0.4"
 
 [dev-dependencies]
